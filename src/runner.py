@@ -53,6 +53,18 @@ class Runner:
         # Utilise la liste des attributs pour s'assurer que seuls les gènes sont retournés
         return {name: getattr(self, name) for name in self.GENE_ATTRIBUTES}
 
+    def get_weight(self):
+        return self.weight
+    
+    def get_fat_ratio(self):
+        return self.fat_ratio
+    
+    def get_thighs_size(self):
+        return self.thighs_size
+    
+    def get_calf_size(self):
+        return self.calf_size
+
     def __repr__(self):
         """ Representation for readable output. """
         return (f"Runner(Fitness: {self.fitness:.2f} | "
